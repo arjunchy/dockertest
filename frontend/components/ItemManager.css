@@ -1,0 +1,280 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+/* Container styles */
+.container {
+    min-width: 500px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title style */
+.title {
+    color: #34495e;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 15px;
+}
+
+/* Error message style */
+.error {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Search bar style */
+.search-bar {
+    padding: 14px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px auto 40px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.search-bar:focus {
+    border: 1px solid #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* Form card style */
+.form-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    margin: 0 auto 50px;
+    max-width: 650px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Input fields in the form card */
+.form-card input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-card input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button group style */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* General button style */
+.btn {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Primary button style */
+.btn.primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #2980b9;
+}
+
+/* Secondary button style */
+.btn.secondary {
+    background: #bdc3c7;
+    color: #2c3e50;
+}
+
+.btn.secondary:hover {
+    background: #95a5a6;
+}
+
+/* Edit button style */
+.btn.edit {
+    background: #27ae60;
+    color: white;
+}
+
+.btn.edit:hover {
+    background: #1e8449;
+}
+
+/* Delete button style */
+.btn.delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn.delete:hover {
+    background: #c0392b;
+}
+
+/* Item list style */
+.items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Item card style */
+.item-card {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* FadeIn and SlideUp animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+.navbar .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .btn {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.navbar .btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Popup Modal Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 90%;
+    overflow-y: auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.popup-content .items-list {
+    list-style: none;
+    padding: 0;
+}
+
+.popup-content .item-card {
+    background-color: #f9f9f9;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.popup-content .btn {
+    margin-top: 15px;
+    padding: 12px 18px;
+}
+
+.popup-content .close-popup {
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 18px;
+    border: none;
+}
+
+.popup-content .close-popup:hover {
+    background-color: #e74c3c;
+}
